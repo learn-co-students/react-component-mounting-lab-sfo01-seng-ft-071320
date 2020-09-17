@@ -5,19 +5,19 @@ import Timer from './Timer'
 class App extends Component {
 
   //no props being used here, so we can use the shorthand declaration of state
-  state = {
+    state = {
     timerIDs: []
   }
-
+ 
 
   //Your code here:
 
+// In App, write a componentDidMount method that invokes the existing handleAddTimer class method.
 
+  componentDidMount(){
 
-
-
-
-
+   this.handleAddTimer()
+  }
 
 
   // No need to modify anything in render or the class methods below
@@ -28,7 +28,7 @@ class App extends Component {
       <div className="App">
         <h1>MultiTimer</h1>
         <button onClick={this.handleAddTimer}>Add New Timer</button>
-
+        
         <div className="TimerGrid">
           {this.renderTimers()}
         </div>
